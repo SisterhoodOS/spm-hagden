@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denise Hager — Soul Path Map 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF0DC;
+      --cream-mid: #F5E6C8;
+      --gold: #BA7517;
+      --gold-light: #D4A04A;
+      --gold-pale: #F0DEB0;
+      --charcoal: #2A2218;
+      --text-primary: #2A2218;
+      --text-secondary: #6B5B3E;
+      --text-muted: #9B8B72;
+      --white: #FFFFFF;
+      --border: rgba(186, 117, 23, 0.2);
+      --shadow: 0 2px 16px rgba(42, 34, 24, 0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #1A1208;
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+    }
+    .sidebar {
+      width: 252px; min-height: 100vh; background: #120E08;
+      border-right: 1px solid rgba(186,117,23,0.12);
+      position: fixed; top: 0; left: 0;
+      display: flex; flex-direction: column;
+      z-index: 100; overflow-y: auto;
+    }
+    .sb-brand { padding: 28px 24px 22px; border-bottom: 1px solid rgba(186,117,23,0.12); }
+    .sb-sigil { font-size: 30px; margin-bottom: 10px; }
+    .sb-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 500; color: var(--cream); letter-spacing: 0.03em; }
+    .sb-tag { font-size: 10px; color: rgba(186,117,23,0.55); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 3px; }
+    .sb-nav { padding: 14px 0; flex: 1; }
+    .nav-group-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.18em; color: rgba(186,117,23,0.4); padding: 14px 24px 5px; font-weight: 600; }
+    .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 24px; cursor: pointer; color: rgba(250,240,220,0.5); font-size: 13px; transition: all 0.15s; border-left: 3px solid transparent; user-select: none; }
+    .nav-item:hover { background: rgba(186,117,23,0.07); color: var(--cream); }
+    .nav-item.active { background: rgba(186,117,23,0.11); color: var(--gold-light); border-left-color: var(--gold); }
+    .nav-icon { font-size: 14px; width: 18px; text-align: center; flex-shrink: 0; }
+    .sb-footer { padding: 14px 24px; border-top: 1px solid rgba(186,117,23,0.1); font-size: 10px; color: rgba(186,117,23,0.3); text-transform: uppercase; letter-spacing: 0.1em; }
+    .main { margin-left: 252px; flex: 1; background: var(--cream); min-height: 100vh; }
+    .page-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 28px 48px; position: sticky; top: 0; z-index: 50; box-shadow: var(--shadow); }
+    .ph-inner { display: flex; align-items: flex-end; justify-content: space-between; }
+    .ph-crumb { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+    .ph-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: var(--charcoal); }
+    .ph-meta { font-size: 11px; color: var(--text-muted); text-align: right; line-height: 1.6; }
+    .ph-badge { display: inline-block; margin-top: 6px; font-size: 10px; font-weight: 600; color: var(--gold); background: var(--gold-pale); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .section { display: none; padding: 44px 48px; }
+    .section.active { display: block; }
+    .card { background: var(--white); border-radius: 16px; padding: 32px; border: 1px solid var(--border); margin-bottom: 24px; }
+    .card-hd { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+    .card-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--gold-pale); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; color: var(--charcoal); }
+    .card-sub { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+    .hero { background: linear-gradient(135deg, var(--charcoal) 0%, #3D2E1A 100%); border-radius: 20px; padding: 48px 40px; text-align: center; margin-bottom: 28px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(186,117,23,0.15) 0%, transparent 65%); }
+    .hero-sigil { font-size: 48px; display: block; margin-bottom: 14px; position: relative; }
+    .hero-kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-light); margin-bottom: 10px; position: relative; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 400; color: var(--cream); line-height: 1.15; margin-bottom: 14px; position: relative; }
+    .hero-body { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: rgba(250,240,220,0.72); font-style: italic; max-width: 460px; margin: 0 auto; line-height: 1.65; position: relative; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+    .cell { background: var(--cream); border-radius: 12px; padding: 18px 20px; border: 1px solid var(--border); }
+    .cell-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 5px; font-weight: 600; }
+    .cell-value { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 500; color: var(--charcoal); }
+    .cell-sub { font-size: 12px; color: var(--text-secondary); margin-top: 5px; line-height: 1.55; }
+    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+    .pill { display: flex; align-items: center; gap: 7px; padding: 9px 14px; background: var(--white); border-radius: 20px; border: 1px solid var(--border); }
+    .pill-lbl { font-size: 11px; color: var(--text-muted); }
+    .pill-val { font-size: 12px; font-weight: 600; color: var(--gold); }
+    .rules { list-style: none; }
+    .rules li { display: flex; align-items: flex-start; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .rules li:last-child { border-bottom: none; }
+    .rnum { width: 24px; height: 24px; border-radius: 50%; background: var(--gold-pale); color: var(--gold); font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .divider { height: 1px; background: var(--border); margin: 26px 0; }
+    .sec-title { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; color: var(--charcoal); margin-bottom: 14px; }
+    .body-text { font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+    .highlight { background: linear-gradient(135deg, rgba(186,117,23,0.07), rgba(186,117,23,0.03)); border: 1.5px solid rgba(186,117,23,0.22); border-radius: 16px; padding: 26px 30px; margin-bottom: 24px; }
+    .highlight-headline { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; color: var(--charcoal); line-height: 1.2; margin-bottom: 12px; }
+    .highlight-body { font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+    .phase-card { padding: 16px 18px; border-radius: 12px; margin-bottom: 12px; border: 1.5px solid transparent; }
+    .phase-card.menstrual { background: rgba(139,107,139,0.1); border-color: rgba(139,107,139,0.2); }
+    .phase-card.follicular { background: rgba(74,123,94,0.1); border-color: rgba(74,123,94,0.3); }
+    .phase-card.ovulatory { background: rgba(186,117,23,0.08); border-color: rgba(186,117,23,0.25); }
+    .phase-card.luteal { background: rgba(123,90,62,0.08); border-color: rgba(123,90,62,0.2); }
+    .phase-name { font-size: 14px; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .phase-body { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+    .shadow-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px; background: var(--cream); border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--border); }
+    .shadow-icon { width: 36px; height: 36px; border-radius: 10px; background: rgba(186,117,23,0.08); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .shadow-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
+    .shadow-text { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+    .dasha-bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-radius: 10px; margin-bottom: 8px; }
+    .dasha-bar.venus { background: rgba(186,117,23,0.09); border: 1px solid rgba(186,117,23,0.2); }
+    .dasha-bar.antardasha { background: rgba(186,117,23,0.18); border: 1.5px solid rgba(186,117,23,0.4); margin-left: 24px; }
+    .dasha-bar.future { background: rgba(74,123,94,0.09); border: 1px solid rgba(74,123,94,0.2); }
+    .dasha-lbl { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+    .dasha-theme { font-size: 12px; color: var(--text-secondary); margin-top: 2px; font-style: italic; }
+    .dasha-period { font-size: 12px; color: var(--text-muted); flex-shrink: 0; margin-left: 16px; }
+    .now-dot { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; color: var(--gold); background: var(--gold-pale); padding: 2px 8px; border-radius: 20px; margin-left: 8px; }
+    .tl-wrap { position: relative; margin: 20px 0 72px; }
+    .tl-track { height: 6px; background: var(--cream-mid); border-radius: 3px; position: relative; }
+    .tl-fill-past { position: absolute; left: 0; top: 0; height: 100%; width: 61%; background: linear-gradient(90deg, rgba(186,117,23,0.35), rgba(186,117,23,0.75)); border-radius: 3px; }
+    .tl-fill-now { position: absolute; left: 60%; top: -4px; height: 14px; width: 5%; background: var(--gold); border-radius: 3px; box-shadow: 0 0 10px rgba(186,117,23,0.5); }
+    .tl-fill-future { position: absolute; left: 65%; top: 0; height: 100%; width: 35%; background: linear-gradient(90deg, rgba(74,123,94,0.55), rgba(74,123,94,0.25)); border-radius: 3px; }
+    .tl-marker { position: absolute; top: 50%; transform: translate(-50%, -50%); }
+    .tl-dot { width: 12px; height: 12px; border-radius: 50%; background: white; border: 2px solid var(--gold); margin: 0 auto; }
+    .tl-dot.now { width: 18px; height: 18px; background: var(--gold); border: 3px solid white; box-shadow: 0 0 0 3px rgba(186,117,23,0.25); }
+    .tl-dot.jup { border-color: rgba(74,123,94,0.8); }
+    .tl-top { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); white-space: nowrap; text-align: center; }
+    .tl-bot { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); white-space: nowrap; text-align: center; }
+    .tl-year { font-size: 11px; font-weight: 700; color: var(--text-primary); }
+    .tl-year.gold { color: var(--gold); }
+    .tl-lbl { font-size: 10px; color: var(--text-muted); }
+    .tl-lbl.gold { color: var(--gold); font-weight: 600; }
+    .tl-period-labels { display: flex; margin-top: 8px; font-family: 'Cormorant Garamond', serif; }
+    .decl { text-align: center; padding: 36px 32px; background: var(--charcoal); border-radius: 18px; margin-bottom: 16px; }
+    .decl-quote { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--cream); font-style: italic; line-height: 1.4; }
+    .decl-line { width: 40px; height: 1px; background: var(--gold); margin: 14px auto 0; }
+    .cal-year { margin-bottom: 32px; }
+    .cal-year-hd { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--border); }
+    .cal-year-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--charcoal); line-height: 1; flex-shrink: 0; }
+    .cal-year-badge { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+    .badge-gold { color: var(--gold); background: var(--gold-pale); }
+    .badge-green { color: rgba(74,123,94,0.9); background: rgba(74,123,94,0.1); }
+    .badge-red { color: #b53030; background: rgba(181,48,48,0.08); }
+    .cal-year-theme { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+    .cal-events { list-style: none; margin-bottom: 20px; }
+    .cal-event { display: flex; align-items: flex-start; gap: 12px; padding: 11px 0; border-bottom: 1px solid rgba(186,117,23,0.08); }
+    .cal-event:last-child { border-bottom: none; }
+    .ev-date { font-size: 11px; font-weight: 700; color: var(--text-muted); min-width: 72px; text-transform: uppercase; letter-spacing: 0.06em; padding-top: 3px; flex-shrink: 0; }
+    .ev-dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+    .ev-dot.auspicious { background: var(--gold); }
+    .ev-dot.eclipse { background: #b53030; }
+    .ev-dot.transit { background: rgba(186,117,23,0.4); }
+    .ev-dot.peak { background: rgba(74,123,94,0.9); box-shadow: 0 0 0 3px rgba(74,123,94,0.2); }
+    .ev-content { flex: 1; }
+    .ev-title { font-size: 13.5px; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
+    .ev-body { font-size: 12.5px; color: var(--text-secondary); line-height: 1.65; }
+    .ev-tag { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 2px 7px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+    .ev-tag.peak { color: rgba(74,123,94,0.9); background: rgba(74,123,94,0.12); }
+    .ev-tag.eclipse { color: #b53030; background: rgba(181,48,48,0.08); }
+    .ev-tag.power { color: var(--gold); background: var(--gold-pale); }
+    .mw-row { display: flex; align-items: flex-start; gap: 16px; padding: 12px 16px; border-radius: 10px; margin-bottom: 8px; }
+    .mw-row.gold { background: rgba(186,117,23,0.06); border: 1px solid rgba(186,117,23,0.16); }
+    .mw-row.green { background: rgba(74,123,94,0.06); border: 1px solid rgba(74,123,94,0.16); }
+    .mw-period-wrap { min-width: 190px; flex-shrink: 0; }
+    .mw-type { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; font-weight: 600; }
+    .mw-period { font-size: 13px; font-weight: 700; color: var(--charcoal); }
+    .mw-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.55; }
+    .audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .audit-cell { padding: 16px 18px; border-radius: 12px; background: var(--cream); border: 1px solid var(--border); }
+    .audit-q { font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 5px; }
+    .audit-a { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+  </style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sb-brand">
+    <div class="sb-sigil">🦁</div>
+    <div class="sb-name">Denise Hager</div>
+    <div class="sb-tag">Soul Path Map · 2026</div>
+  </div>
+  <div class="sb-nav">
+    <div class="nav-group-label">Foundation</div>
+    <div class="nav-item active" onclick="show('overview')"><span class="nav-icon">✦</span> Overview</div>
+    <div class="nav-item" onclick="show('hd')"><span class="nav-icon">◯</span> Human Design</div>
+    <div class="nav-item" onclick="show('vedic')"><span class="nav-icon">☽</span> Vedic Chart</div>
+    <div class="nav-group-label">Embodiment</div>
+    <div class="nav-item" onclick="show('cycle')"><span class="nav-icon">🌿</span> Cycle Phase</div>
+    <div class="nav-item" onclick="show('decision')"><span class="nav-icon">⚖</span> Decision Audit</div>
+    <div class="nav-item" onclick="show('shadow')"><span class="nav-icon">◈</span> Shadow Check</div>
+    <div class="nav-item" onclick="show('activation')"><span class="nav-icon">☀</span> 2026 Activation</div>
+    <div class="nav-item" onclick="show('ventures')"><span class="nav-icon">◉</span> Ventures &amp; Role</div>
+    <div class="nav-group-label">Arc</div>
+    <div class="nav-item" onclick="show('timeline')"><span class="nav-icon">→</span> Dasha Timeline</div>
+    <div class="nav-item" onclick="show('declarations')"><span class="nav-icon">❖</span> Declarations</div>
+    <div class="nav-item" onclick="show('calendar')"><span class="nav-icon">📅</span> Calendar 2026–30</div>
+  </div>
+  <div class="sb-footer">Saha Synergy · 2026</div>
+</nav>
+
+<div class="main">
+  <div class="page-header">
+    <div class="ph-inner">
+      <div>
+        <div class="ph-crumb">Soul Path Collective · Saha Synergy · 2026</div>
+        <div class="ph-title">Denise Hager</div>
+      </div>
+      <div class="ph-meta">
+        11 Apr 1990 · Leo Ascendant · Revati Sun (Gandanta)<br>
+        Saturn Mahadasha · Saturn / Moon Antardasha
+        <div class="ph-badge">Saturn / Mars begins 11 Apr 2027 · Splenic Projector · The Home Method™</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div id="overview" class="section active">
+    <div class="hero">
+      <span class="hero-sigil">🦁</span>
+      <div class="hero-kicker">Soul Path Collective · Saha Synergy · 2026</div>
+      <div class="hero-title">The Architect of Return</div>
+      <div class="hero-body">"She does not guide people back to themselves with soft words. She builds the structure that makes the return possible. The method is not the offering. She is."</div>
+    </div>
+
+    <div class="pill-row">
+      <div class="pill"><span>◯</span><span class="pill-lbl">WD Code</span><span class="pill-val">Lord · Steel</span></div>
+      <div class="pill"><span>☽</span><span class="pill-lbl">Sun</span><span class="pill-val">Pisces Revati · Gandanta</span></div>
+      <div class="pill"><span>⚡</span><span class="pill-lbl">Dasha</span><span class="pill-val">Saturn / Moon</span></div>
+      <div class="pill"><span>♌</span><span class="pill-lbl">Ascendant</span><span class="pill-val">Leo · Purva Phalguni</span></div>
+      <div class="pill"><span>◯</span><span class="pill-lbl">HD Type</span><span class="pill-val">Projector · Splenic</span></div>
+      <div class="pill"><span>⚬</span><span class="pill-lbl">Yogas</span><span class="pill-val">Sasha + Ruchaka</span></div>
+    </div>
+
+    <div class="grid2">
+      <div class="cell">
+        <div class="cell-label">Wealth Dynamics Code</div>
+        <div class="cell-value">Lord — Steel Dominant</div>
+        <div class="cell-sub">The Lord accumulates through mastery: deep expertise, concentrated focus, and long-term thinking. Steel implements methodically and never stops. Together: someone who builds a precise, durable system and delivers it with relentless consistency. The Home Method is Lord/Steel encoded in a product.</div>
+      </div>
+      <div class="cell">
+        <div class="cell-label">Active Dasha Period</div>
+        <div class="cell-value">Saturn / Moon</div>
+        <div class="cell-sub">Saturn Mahadasha (Oct 2014 to Oct 2033). Saturn/Moon antardasha: Sept 2025 to 11 Apr 2027. This is the emotional refinement period within the mastery era. On her 37th birthday (Apr 11, 2027), Saturn/Mars begins: the execution phase. The discipline she has built is about to move.</div>
+      </div>
+      <div class="cell">
+        <div class="cell-label">Ascendant Energy</div>
+        <div class="cell-value">Leo · Purva Phalguni</div>
+        <div class="cell-sub">Purva Phalguni is the nakshatra of creative rest and patronage, ruled by Venus (Bhaga, the deity of delight). Leo Ascendant: natural dignity, radiance, sovereign presence. She does not have to perform authority. It is the frequency she carries. The work is allowing it to be seen without apology.</div>
+      </div>
+      <div class="cell">
+        <div class="cell-label">6th House Stellium</div>
+        <div class="cell-value">Sasha + Ruchaka Yoga</div>
+        <div class="cell-sub">Saturn in own sign + Mars exalted + Rahu in Capricorn H6: two Panchamahapurusha Yogas in the house of service and mastery. This is not a coincidence. Her entire vocational architecture is encoded in the 6th house. She came to master the art of structured, embodied service. The Home Method IS this chart.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">✦</div>
+        <div>
+          <div class="card-title">Core Gifts</div>
+          <div class="card-sub">What Denise brings to every room, every session, every container</div>
+        </div>
+      </div>
+      <div class="grid2" style="margin-bottom:0">
+        <div class="cell">
+          <div class="cell-label">Structural Mastery</div>
+          <div class="cell-sub">Sasha Yoga (Saturn own sign H6) + Lord WD: she does not just understand systems, she builds them into the bone of her work. The Home Method is not a framework she invented. It is the natural form her precision takes when applied to human transformation. The structure IS the healing.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">Revati Sun — The Guide</div>
+          <div class="cell-sub">Sun in Revati (Pisces H8): Revati is Pushan's nakshatra, the nourishing guardian who guides travelers safely to their destination. She does not push people forward. She illuminates the path so thoroughly that forward becomes the only natural movement. This is the soul's solar gift: orientation through presence.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">Ruchaka Execution</div>
+          <div class="cell-sub">Mars exalted in Capricorn H6: Ruchaka Yoga gives extraordinary execution capacity and physical courage in the domain of service. She does not just hold space. She takes the right action at the right moment and does not flinch. This is why her clients trust her: the precision has never failed them.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">Splenic Reading</div>
+          <div class="cell-sub">Splenic Projector: she reads the energy of the people she works with at the level of the body, before the mind has formed an opinion. When something is off in a session, she knows before the client names it. This is not intuition as a personality trait. It is a defined biological center. The Spleen does not lie.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HUMAN DESIGN -->
+  <div id="hd" class="section">
+    <div style="background:rgba(186,117,23,0.06);border:1px solid rgba(186,117,23,0.2);border-radius:12px;padding:14px 20px;margin-bottom:24px;font-size:12px;color:var(--text-secondary);line-height:1.7;">
+      <strong style="color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Calculation Sources</strong><br>
+      Human Design gates computed via Swiss Ephemeris (tropical zodiac). Birth: 11 Apr 1990. Type: Splenic Projector. Authority: Splenic. Strategy: Wait for the Invitation. For full bodygraph rendering with exact gate and channel activations, verify at <strong>myBodyGraph.com</strong> using birth time and location.
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">◯</div>
+        <div>
+          <div class="card-title">Human Design — Splenic Projector</div>
+          <div class="card-sub">Splenic Authority · Strategy: Wait for the Invitation · Birth: 11 Apr 1990</div>
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-bottom:20px">
+        <div class="cell" style="border-left:3px solid var(--gold)">
+          <div class="cell-label">Type</div>
+          <div class="cell-value">Projector</div>
+          <div class="cell-sub">No defined Sacral center. She does not have consistent motor energy like Generators. She runs in focused bursts and needs genuine rest between. Her gift is seeing systems, people, and the precise intervention point with extraordinary clarity. She is not here to do the work. She is here to guide how the work finds its way home. The Home Method is Projector architecture: a precise, guided container.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid var(--gold)">
+          <div class="cell-label">Authority</div>
+          <div class="cell-value">Splenic</div>
+          <div class="cell-sub">The rarest authority. The Spleen speaks once, in the present moment, as a body sensation. It does not repeat. In session: she reads the client's field before they have named what is happening. Her Sasha Yoga (Saturn own sign H6) gives this Splenic reading structural precision. She does not just feel something is off. She knows what the structure requires. Trust the first body hit without re-examining.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">Strategy</div>
+          <div class="cell-value">Wait for the Invitation</div>
+          <div class="cell-sub">Projectors who initiate without invitation burn out and feel invisible. The invitation is recognition: when someone genuinely sees her capacity and calls it forward. The not-self theme for Projectors is bitterness, the feeling of offering brilliance into a space that has not opened for it. Her Splenic authority sharpens the invitation detector: the body knows in the first moment whether an invitation is genuine recognition or a transactional request.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">Projector Design</div>
+          <div class="cell-value">Built to Guide, Not Generate</div>
+          <div class="cell-sub">With Sasha Yoga and Ruchaka Yoga both in H6, her Projector design does not mean she lacks force. It means her force is the most concentrated form available: surgical precision in a contained period, followed by genuine rest. The 18-session format of The Home Method is already Projector-calibrated. She is not built for indefinite client volume. She is built for depth.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-title">Sacred Rules — Projector with Splenic Authority</div>
+      <ul class="rules">
+        <li><span class="rnum">1</span>Wait for genuine recognition before offering guidance. When someone truly sees her capacity and invites her in, the Spleen will confirm. Unsolicited guidance, however brilliant, lands as bitterness and drains the field she brings to paid work.</li>
+        <li><span class="rnum">2</span>Rest is her primary productivity strategy, not a recovery mechanism. Projectors require significantly more rest than Generators. Her energy tank is smaller and requires intentional maintenance. The space between sessions is where her Splenic precision resets. This is professional calibration, not laziness.</li>
+        <li><span class="rnum">3</span>Trust the Spleen exactly once. The first body-hit is the truth: about a client, a direction, a decision, a partnership. The second thought is the mind's interference. Make the choice from the first flash or do not make it at all.</li>
+        <li><span class="rnum">4</span>The Projector's mastery is recognized before it is hired. Her work with Saha Synergy, her reputation, and the quality of The Home Method are the invitations she is cultivating. The container attracts the right clients when the mastery is visible. Visibility is the strategy, not marketing volume.</li>
+        <li><span class="rnum">5</span>Sasha Yoga (H6) gives her the capacity to sustain her practice through long Saturn transits. Her discipline holds even in adversity. The Saturn/Moon period (to Apr 2027) is not breaking her. It is deepening the precision of what she offers.</li>
+        <li><span class="rnum">6</span>The invitation she is building toward (Apr 11, 2027) is not just a client. It is the Saturn/Mars antardasha itself, the chart literally activating a new level of execution. Prepare the container now so the force has somewhere to land.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">✦</div>
+        <div>
+          <div class="card-title">Wealth Dynamics — Lord · Steel</div>
+          <div class="card-sub">Roger Hamilton 5.0 · Lord 48% · Steel 28% · Tempo 16% · Blaze 8%</div>
+        </div>
+      </div>
+      <div class="body-text">Wealth Dynamics identifies how individuals naturally generate value. The Lord profile creates value through mastery, depth, and accumulated expertise. Steel creates value through implementation, consistency, and disciplined follow-through. Denise's dominant Lord profile is confirmed by Sasha Yoga (Saturn own sign H6): both systems say the same thing. She accumulates through depth, not breadth. The more she specialises, the more valuable the offer becomes.</div>
+      <div class="grid2" style="margin-bottom:0">
+        <div class="cell"><div class="cell-label">Lord (48%) — Primary</div><div class="cell-value">Mastery</div><div class="cell-sub">Lords generate value by becoming the most precise and trusted expert in a specific domain. The 6-month, 18-session Home Method structure is Lord architecture: deep access, long commitment, concentrated expertise. She is not a generalist. She is a specialist in the mechanics of return. Depth is the product.</div></div>
+        <div class="cell"><div class="cell-label">Steel (28%) — Dominant Secondary</div><div class="cell-value">Implementation</div><div class="cell-sub">Steel does not stop. Steel holds the standard, delivers on the promise, and builds systems that outlast any single interaction. The HALT·OPEN·MEET·EMBRACE framework is Steel translated into a repeatable sequence. Denise's value to her clients is not just the insight. It is the system that keeps delivering after each session ends.</div></div>
+        <div class="cell"><div class="cell-label">Shadow Pattern</div><div class="cell-value">Over-mastery without recognition</div><div class="cell-sub">The Lord's deepest shadow is becoming so expert that the offer becomes opaque to those who need it most. The Steel shadow is implementing so persistently that feedback stops landing. Together: perfecting the method beyond the market's ability to recognize its value. The antidote: Projector strategy. Be seen. Wait to be called.</div></div>
+        <div class="cell"><div class="cell-label">Highest Expression</div><div class="cell-value">The Method as Legacy</div><div class="cell-sub">When Lord/Steel is operating at full frequency: a body of work so precisely constructed that it can be replicated, taught, and delivered by others without losing quality. The Home Method is not just a coaching program. At its fullest expression, it becomes the certification framework Denise builds from, training others in the method she mastered.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VEDIC CHART -->
+  <div id="vedic" class="section">
+    <div style="background:rgba(186,117,23,0.06);border:1px solid rgba(186,117,23,0.2);border-radius:12px;padding:14px 20px;margin-bottom:24px;font-size:12px;color:var(--text-secondary);line-height:1.7;">
+      <strong style="color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">Calculation Sources</strong><br>
+      <strong style="color:rgba(74,123,94,0.9);">Verified via Swiss Ephemeris (pyswisseph).</strong> All planetary positions computed with Lahiri Ayanamsa for 11 Apr 1990. Ascendant: Leo 17°34' Purva Phalguni Pada 2. Dasha sequence confirmed from Moon in Swati Pada 3 (Libra 13°42'). Saturn Mahadasha: Oct 2014 to Oct 2033. Verify at <strong>myBodyGraph.com</strong> for Human Design bodygraph; consult full chart for birth time precision on house cusps.
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">☽</div>
+        <div>
+          <div class="card-title">Vedic Chart — Full Reading</div>
+          <div class="card-sub">Sidereal / Lahiri Ayanamsa · Leo Ascendant · Swiss Ephemeris verified · 11 Apr 1990</div>
+        </div>
+      </div>
+
+      <div class="sec-title">Planetary Positions (Swiss Ephemeris Verified)</div>
+      <div style="overflow-x:auto;margin-bottom:24px;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:var(--cream);border-bottom:2px solid var(--border);">
+              <th style="padding:10px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:600;">Planet</th>
+              <th style="padding:10px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:600;">Position (Vedic)</th>
+              <th style="padding:10px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:600;">Nakshatra</th>
+              <th style="padding:10px 4px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:600;">Lord</th>
+              <th style="padding:10px 14px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:600;">House</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(186,117,23,0.04);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">Ascendant</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">17°34' Leo</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Purva Phalguni, Pada 2</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Venus</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:var(--gold-pale);color:var(--gold);font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;">1st</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">☀ Sun</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">27°42' Pisces <span style="color:#a33;font-size:10px;font-weight:700;">GANDANTA</span></td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Revati, Pada 4</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Mercury</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(139,107,139,0.15);color:#8B6B8B;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;">8th ◈</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(186,117,23,0.03);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">☽ Moon</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">13°42' Libra</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Swati, Pada 3</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Rahu</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:var(--cream);color:var(--text-secondary);font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;">3rd</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">♂ Mars</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">29°18' Capricorn <span style="color:rgba(74,123,94,0.9);font-size:10px;font-weight:700;">EXALTED</span></td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Dhanishtha, Pada 2</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Mars</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(74,123,94,0.15);color:rgba(74,123,94,0.9);font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;">6th ✦</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(186,117,23,0.03);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">♃ Jupiter</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Gemini</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Ardra</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Rahu</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:var(--cream);color:var(--text-secondary);font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;">11th</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">♄ Saturn</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">1°10' Capricorn <span style="color:rgba(74,123,94,0.9);font-size:10px;font-weight:700;">OWN SIGN</span></td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Uttarashada, Pada 4</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Sun</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(74,123,94,0.15);color:rgba(74,123,94,0.9);font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;">6th ✦</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(186,117,23,0.03);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">☊ Rahu</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">19°24' Capricorn</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Shravana, Pada 2</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Moon</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:var(--cream);color:var(--text-secondary);font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;">6th</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">☋ Ketu</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Cancer</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Ashlesha</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Mercury</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(139,107,139,0.15);color:#8B6B8B;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;">12th ◈</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(186,117,23,0.03);">
+              <td style="padding:10px 14px;font-weight:600;color:var(--charcoal);">♀ Venus</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Aquarius</td>
+              <td style="padding:10px 14px;color:var(--text-secondary);">Shatabhisha</td>
+              <td style="padding:10px 4px;text-align:center;color:var(--text-muted);">Rahu</td>
+              <td style="padding:10px 14px;text-align:center;"><span style="background:var(--cream);color:var(--text-secondary);font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;">7th</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sec-title">Key Placements — Interpretation</div>
+      <div class="grid2">
+        <div class="cell" style="border-left:3px solid var(--gold)">
+          <div class="cell-label">Leo ASC · Purva Phalguni</div>
+          <div class="cell-value" style="font-size:16px;">Creative Sovereign</div>
+          <div class="cell-sub">Purva Phalguni (ruled by Venus/Bhaga): the nakshatra of creative patronage, rest after labor, and the enjoyment of what has been built. Leo gives her natural radiance of the sun. She does not have to try to be magnetic. She simply arrives. The shadow: shrinking the light because others seem uncomfortable with it. The gift: a presence that creates safety through its very clarity.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(139,107,139,0.7)">
+          <div class="cell-label">Sun in Revati Pada 4 (H8) · Gandanta</div>
+          <div class="cell-value" style="font-size:16px;">The Nourishing Guide</div>
+          <div class="cell-sub">Revati is Pushan's nakshatra: the divine shepherd who guides souls safely to their destination. Pada 4 is the Pisces navamsa, the deepest dissolution into the archetype. Gandanta marks a soul at a profound karmic threshold. H8 = transformation, depth, other people's resources. Her gift is guiding people through their own H8 territory. She has been there herself.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(74,123,94,0.9)">
+          <div class="cell-label">H6 Stellium: Sasha + Ruchaka Yoga</div>
+          <div class="cell-value" style="font-size:16px;">Two Royal Yogas in Service</div>
+          <div class="cell-sub">Saturn own sign (Sasha Yoga) + Mars exalted (Ruchaka Yoga) + Rahu in H6 (Capricorn): two of the five Panchamahapurusha Yogas in the house of mastery, service, health, and daily practice. An extraordinary configuration for a practitioner. The Rahu amplification means the mastery drive is intensified to the point of obsession at the shadow level. The gift: unmatched depth. The watch: discipline is not the same as worth.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(186,117,23,0.5)">
+          <div class="cell-label">Venus in Shatabhisha (H7)</div>
+          <div class="cell-value" style="font-size:16px;">The Hundred Healers</div>
+          <div class="cell-sub">Shatabhisha means "hundred healers" or "the physician." Venus in H7 (partnerships, clients, contracts) in the nakshatra of healing and secrecy: her work with clients is written into the partnership house by the planet of relationship. Her deepest relational gift is healing. The client relationship is the container through which Shatabhisha expresses. The method and the relationship are inseparable.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(74,123,94,0.5)">
+          <div class="cell-label">Jupiter in Ardra (H11)</div>
+          <div class="cell-value" style="font-size:16px;">Growth Through Storm</div>
+          <div class="cell-sub">Ardra is Rahu's nakshatra, the star of tears, dissolution, and the breakthrough that follows intensity. Jupiter in Ardra H11 (income, community, network): her community and financial growth come through periods of storm and transformation, not smooth linear progress. What she builds in the aftermath of difficulty is more durable than anything built before it.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(139,107,139,0.6)">
+          <div class="cell-label">Ketu in Cancer H12 (Ashlesha)</div>
+          <div class="cell-value" style="font-size:16px;">The Liberation Anchor</div>
+          <div class="cell-sub">Ketu in Cancer H12: deep past-life karma around nurturing and home. H12 governs liberation, retreat, the unseen, and foreign environments. Ashlesha is the serpent nakshatra of deep wisdom and coiling intelligence. This placement gives her access to wisdom that originates before this lifetime. The gift: a liberative intelligence that recognizes what is ready to be released in others.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-title">Active Yogas</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:0">
+        <div class="cell"><div class="cell-label">Sasha Yoga</div><div class="cell-sub">Saturn own sign (Capricorn) in H6. Disciplined mastery, long-term authority, exceptional endurance. One of the five Panchamahapurusha Yogas. Expressed through structured service.</div></div>
+        <div class="cell"><div class="cell-label">Ruchaka Yoga</div><div class="cell-sub">Mars exalted (Capricorn) in H6. Courage, precise execution, physical excellence, mastery through consistent action. Second Panchamahapurusha Yoga. Both in H6: service is the arena of mastery.</div></div>
+        <div class="cell"><div class="cell-label">Leo Dignity</div><div class="cell-sub">Leo Ascendant: Sun rules the chart. A naturally dignified chart. Identity and soul-purpose are aligned. What she does in the world is an authentic expression of who she is.</div></div>
+        <div class="cell"><div class="cell-label">Swati Moon</div><div class="cell-sub">Moon in Swati Pada 3 (Libra): the independent self-moving nakshatra. Emotional intelligence calibrated to balance, fairness, and the freedom to move in any direction. She cannot be contained in emotional stagnation for long.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">⚡</div>
+        <div>
+          <div class="card-title">Current Dasha Period</div>
+          <div class="card-sub">Saturn Mahadasha · Saturn/Moon Antardasha (Sept 2025 to 11 Apr 2027)</div>
+        </div>
+      </div>
+      <div class="highlight" style="border-color:rgba(186,117,23,0.45)">
+        <div class="highlight-headline">Saturn / Moon: The Emotional Refinement Within the Mastery Era</div>
+        <div class="highlight-body">Saturn Mahadasha (Oct 2014 to Oct 2033) is the defining era of Denise's adult life: 19 years of structured mastery, accumulated expertise, and disciplined service. Within this era, the Saturn/Moon antardasha (Sept 2025 to 11 Apr 2027) brings the Moon's themes into the Saturn field. Moon rules the emotional body and the inner landscape. In a Saturn Mahadasha, the Moon period tests the inner architecture: what has the discipline actually been building? What emotional patterns are still running beneath the precision? This period asks for full honesty about that question. Not to dismantle the structure, but to make it sovereign.</div>
+      </div>
+      <div class="grid2" style="margin-bottom:0">
+        <div class="cell" style="border:1.5px solid var(--gold);background:rgba(186,117,23,0.04)"><div class="cell-label" style="color:var(--gold)">Active Now: Saturn/Moon (to 11 Apr 2027)</div><div class="cell-sub">The emotional curriculum within the mastery era. Moon in Swati (independence, balance) + Saturn's field: learning to sustain the practice without losing the inner freedom that makes it nourishing. The work is not more discipline. It is discernment within discipline.</div></div>
+        <div class="cell" style="border:1.5px solid rgba(74,123,94,0.5);background:rgba(74,123,94,0.04)"><div class="cell-label" style="color:rgba(74,123,94,0.9)">BIRTHDAY THRESHOLD: Saturn/Mars (11 Apr 2027)</div><div class="cell-sub">Begins on her 37th birthday. Mars exalted in H6 (Ruchaka Yoga) activates within Saturn Mahadasha. The execution and deployment phase begins. What she has refined through Saturn/Moon is ready to move. This is the launch window the chart has been building toward.</div></div>
+        <div class="cell"><div class="cell-label">Saturn/Rahu: ~May 2028 to Mar 2031</div><div class="cell-sub">Rahu in Capricorn H6: amplification of the mastery drive. A period of rapid expansion of the practice, potentially into new territories or scales. Rahu accelerates what Saturn has built. Manage the obsession quality carefully.</div></div>
+        <div class="cell"><div class="cell-label">Saturn/Jupiter: ~Mar 2031 to Oct 2033</div><div class="cell-sub">The closing antardasha of Saturn Mahadasha. Jupiter in Ardra H11 integrated with Saturn's mastery field. A period of wisdom, teaching, and transition toward the Mercury Mahadasha era of transmission.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CYCLE PHASE -->
+  <div id="cycle" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">🌿</div>
+        <div>
+          <div class="card-title">Cycle Phase Reading</div>
+          <div class="card-sub">Reference for all four phases · Track your cycle day to identify your current phase</div>
+        </div>
+      </div>
+
+      <div class="body-text">Swati Moon (Libra H3) gives Denise an emotional body that craves independent movement and balance. The Swati energy is the single shoot of grass bending in the wind but never breaking: responsive, flexible, deeply rooted. Her cycle is the living map of this. Each phase gives different access to different parts of her Sasha/Ruchaka mastery. Use this to time client work, high-stakes decisions, creative output, and recovery.</div>
+
+      <div class="divider"></div>
+      <div class="sec-title">All Four Phases</div>
+      <div class="phase-card menstrual">
+        <div class="phase-name" style="color:#8B6B8B">❄ Menstrual, Winter (Days 1–5)</div>
+        <div class="phase-body"><strong>Archetype:</strong> The Oracle. This is the Revati Sun's territory: the nourishing guide who receives from the inner world before returning to the outer. What she knows in stillness during menstruation about her clients, her method, and her path is more accurate than anything she will analyze in any other phase.<br><br><strong>Gifts:</strong> Depth perception, truth-seeing, pattern recognition, prophetic clarity. The structures and methods built in other phases are revealed as sufficient or insufficient here.<br><br><strong>Protocol:</strong> No major decisions. No new client onboarding. Let the Splenic authority run without mental interference. The body's knowing in this phase is the highest intelligence available. Rest is strategy. Allow the Oracle to arrive.</div>
+      </div>
+      <div class="phase-card follicular">
+        <div class="phase-name" style="color:#4A7B5E">🌱 Follicular, Spring (Days 6–14)</div>
+        <div class="phase-body"><strong>Archetype:</strong> The Architect. Rising estrogen brings rising clarity and structural thinking. The Lord/Steel WD code activates most naturally here: ideas form into precise frameworks, the method gets sharper, new protocols emerge. This is the phase to design, refine, and build the container.<br><br><strong>Gifts:</strong> Innovative thinking, methodological precision, the pleasure of building. The Saturn/Sasha mastery is most accessible and joyful in this phase.<br><br><strong>Protocol:</strong> Ideal for developing new elements of The Home Method, writing, recording content, working with clients on structural questions. Design from this phase's clarity.</div>
+      </div>
+      <div class="phase-card ovulatory">
+        <div class="phase-name" style="color:#BA7517">☀ Ovulatory, Summer (Days 15–19)</div>
+        <div class="phase-body"><strong>Archetype:</strong> The Sovereign. Leo ASC at its fullest expression: the magnetic field is at peak radiance. Her Purva Phalguni Ascendant, with its Venus/Bhaga rulership, shines most visibly here. The invitation arrives in this phase. This is when the right clients find her, when the recognition is most legible.<br><br><strong>Gifts:</strong> Communication, presence, magnetic visibility, the quality of being genuinely seen and seeing others. Discovery calls, masterclasses, speaking engagements, and enrollment conversations belong in Summer.<br><br><strong>Protocol:</strong> Visibility work. Projector invitations are most easily received when she is in Summer frequency. Move boldly, rest deeply afterward.</div>
+      </div>
+      <div class="phase-card luteal">
+        <div class="phase-name" style="color:#7B5A3E">🍂 Luteal, Autumn (Days 20+)</div>
+        <div class="phase-body"><strong>Archetype:</strong> The Refiner. The Ruchaka Yoga activates: the capacity for disciplined completion, quality checking, and honest assessment. The inner critic rises. Use it as Mars in Capricorn intended: as a quality instrument, not a punishment. In Autumn, the Home Method's standards are most precisely felt.<br><br><strong>Gifts:</strong> Editing, completing, refining, ending what is not working. The Steel subdominant holds the standard even when the energy drops.<br><br><strong>Protocol:</strong> Protect energy fiercely in days 25+. No new commitments. Complete what is already open. The Splenic no will arrive more frequently here. Trust it entirely.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DECISION AUDIT -->
+  <div id="decision" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">⚖</div>
+        <div>
+          <div class="card-title">Decision Audit</div>
+          <div class="card-sub">Lord/Steel Code · Splenic Authority · Saturn/Moon Dasha</div>
+        </div>
+      </div>
+
+      <div class="body-text">The Lord's decision-making challenge: she can become so absorbed in refining the method that she defers the decision to deploy it. The Steel's challenge: implementing so persistently that feedback signals are missed. The Splenic Projector's challenge: offering the method before the invitation arrives. The audit below helps her locate her own yes before extending it to any client, project, or commitment.</div>
+
+      <div class="sec-title">The Lord/Steel Decision Filter</div>
+      <div class="audit-grid">
+        <div class="audit-cell">
+          <div class="audit-q">1. Is this an invitation or an imposition?</div>
+          <div class="audit-a">Projector strategy requires that she sense genuine recognition before engaging. Check: has the person truly seen her capacity and called it forward? Or is she offering the method into a space that has not yet opened for it? The Spleen will know in the first moment. Trust the first body signal before the mind builds reasons.</div>
+        </div>
+        <div class="audit-cell">
+          <div class="audit-q">2. Am I refining to avoid delivering?</div>
+          <div class="audit-a">The Lord shadow: perfecting the method beyond the point of action. The Home Method does not need one more iteration before it is ready. Check: is this refinement genuine improvement, or is it the shadow of Saturn Mahadasha asking her to defer her own visibility? Steel's answer: ship it, iterate in the field.</div>
+        </div>
+        <div class="audit-cell">
+          <div class="audit-q">3. Does this expand or contract the practice?</div>
+          <div class="audit-a">Sasha Yoga and Ruchaka Yoga are both in H6 (service, mastery, daily practice). Her chart is calibrated to a sustainable, deeply skilled practice, not unlimited volume. Check: does this decision grow the quality of the work, or does it dilute it? Depth is the Lord's competitive advantage. Protect it above volume.</div>
+        </div>
+        <div class="audit-cell">
+          <div class="audit-q">4. What does the Spleen say, right now?</div>
+          <div class="audit-a">The first body sensation is the complete answer. Not the second, not the third. Splenic authority operates in real time: a warmth = yes, a flatness or contraction = no or not yet. The mind will immediately construct reasons to override both. Do not override. The Spleen has been right about clients, directions, and timings in every case she can point to. Trust the first flash without exception.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-title">Saturn / Moon Decision Protocol</div>
+      <div style="background:rgba(139,107,139,0.06);border:1px solid rgba(139,107,139,0.2);border-radius:12px;padding:20px 24px;font-size:13.5px;color:var(--text-secondary);line-height:1.75;">
+        <strong style="color:#8B6B8B;">In Saturn/Moon antardasha:</strong> The emotional body is carrying more weight than usual. The Moon in Swati (H3) needs independence and room to breathe. Major decisions made from a contracted emotional state in this period tend to over-restrict or over-protect. The practice: notice when a decision is coming from the Moon's contraction (fear of loss) versus from Splenic knowing (present truth). Give the decision one breath. If the Spleen has spoken, act. If it is the Moon's anxious contracting, wait for the next cycle day.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">⚬</div>
+        <div>
+          <div class="card-title">Splenic Authority: The First Flash Protocol</div>
+          <div class="card-sub">Rarest of the 7 authorities. The Spleen speaks once, in the present moment only. It will not repeat.</div>
+        </div>
+      </div>
+
+      <div class="highlight" style="border-color:rgba(74,123,94,0.35);background:rgba(74,123,94,0.04);margin-bottom:24px">
+        <div class="highlight-headline" style="font-size:20px">The First Body Hit is the Answer</div>
+        <div class="highlight-body">Denise's Splenic authority speaks before the mind forms an opinion. A warmth, an ease, a quiet yes. Or a flatness, a slight contraction, a something-is-off signal. The Spleen does not repeat itself. If she waits for confirmation, she has left the Splenic window and entered the mind's interference loop. In session with clients, this is her greatest gift: she reads the field before the client has named what is happening. In her own decisions, it is the compass that has never failed her when she trusted it on the first pass. The Saturn/Moon period may make the emotional noise louder, but the Splenic flash is always quieter and always earlier. Catch it before the noise.</div>
+      </div>
+
+      <div class="sec-title">Splenic Protocol by Decision Type</div>
+      <div class="grid2" style="margin-bottom:0">
+        <div class="cell" style="border-left:3px solid rgba(74,123,94,0.8)">
+          <div class="cell-label">Client Intake</div>
+          <div class="cell-sub">In the first contact with a potential client, the Spleen will signal whether this is a genuine invitation (recognition of her capacity) or a transactional request. A 30-second body check before the discovery call determines whether to proceed. The quality of the 18-session container depends on this first assessment.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid var(--gold)">
+          <div class="cell-label">Collaboration and Visibility</div>
+          <div class="cell-sub">Opportunities to collaborate, speak, or be seen: the first body response in the moment of reading or hearing the invitation. Warmth = yes. Flatness = not this one, not this way. The Sasha/Leo combination can create pressure to always say yes to visibility. The Splenic no to the wrong visibility protects the field for the right invitation.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(186,117,23,0.5)">
+          <div class="cell-label">Method Decisions</div>
+          <div class="cell-sub">When refining The Home Method or adding a new element, the Spleen knows whether the addition is genuine precision or anxiety-driven expansion. First body hit: does this make the method feel more alive, or more defended? Alive = yes. Defended = not yet.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(139,107,139,0.6)">
+          <div class="cell-label">April 2027 Threshold</div>
+          <div class="cell-sub">When Saturn/Mars begins on her birthday, the Spleen will clarify which of the directions she has been preparing is the right first move. Do not pre-decide from the mind. Keep multiple tracks open through Saturn/Moon, and let the Spleen choose when the threshold arrives.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHADOW CHECK -->
+  <div id="shadow" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">◈</div>
+        <div>
+          <div class="card-title">Shadow Check</div>
+          <div class="card-sub">The five patterns that cost Denise most: know them before they move</div>
+        </div>
+      </div>
+
+      <div class="shadow-item">
+        <div class="shadow-icon">♄</div>
+        <div>
+          <div class="shadow-lbl">Shadow 1 · Saturn Mahadasha + Sasha Yoga</div>
+          <div class="shadow-text"><strong>Discipline as worthiness proxy.</strong> When Saturn rules both the Mahadasha and a Panchamahapurusha Yoga in H6, the shadow is equating relentless discipline with earned value. The internal logic: "If I structure it perfectly enough, I will deserve to be seen." This drives excellence and also drives the deferral of deployment. The Home Method is already worthy. The refining that happens past the point of readiness is Saturn's shadow, not Saturn's gift. The gift is the discipline that built it. The shadow is the discipline that hides behind it.</div>
+        </div>
+      </div>
+
+      <div class="shadow-item">
+        <div class="shadow-icon">🦁</div>
+        <div>
+          <div class="shadow-lbl">Shadow 2 · Leo ASC</div>
+          <div class="shadow-text"><strong>Collapsing the light because it is too much for the room.</strong> Leo Ascendant creates natural radiance that some people find confronting. The adaptation pattern: dimming, deflecting compliments, performing smallness to manage others' discomfort. This is the most costly shadow, because it comes dressed as modesty. Purva Phalguni is the nakshatra of patronage: she is designed to be a natural center of gravity. When she shrinks, the field shrinks with her and the people who needed that center lose access to it.</div>
+        </div>
+      </div>
+
+      <div class="shadow-item">
+        <div class="shadow-icon">☀</div>
+        <div>
+          <div class="shadow-lbl">Shadow 3 · Sun in H8 (Gandanta)</div>
+          <div class="shadow-text"><strong>Identifying with others' transformation at the cost of her own.</strong> Sun in H8 (transformation, other people's depth) in a gandanta position: her solar identity has been shaped by processing other people's material. As a practitioner, this is her gift. As a shadow, it means she can lose the thread of her own solar identity in the work. The Revati nourishing guide can forget she is also a traveler with her own destination. The practice: regularly asking "whose transformation am I tracking right now? Mine or theirs?"</div>
+        </div>
+      </div>
+
+      <div class="shadow-item">
+        <div class="shadow-icon">◉</div>
+        <div>
+          <div class="shadow-lbl">Shadow 4 · Rahu in H6 Capricorn</div>
+          <div class="shadow-text"><strong>Mastery obsession that bypasses the body's signals.</strong> Rahu amplifies and distorts whatever it touches. In H6 alongside Saturn and Mars, Rahu intensifies the mastery drive past the point of health. The shadow: working through the exhaustion signals, adding one more element to the method, taking one more client, because the H6 Rahu cannot stop refining. This depletes the Splenic Projector's most critical resource: the Splenic clarity that requires a rested body to operate cleanly. Rahu's shadow in H6 is the practitioner who works so hard she loses access to her own instrument.</div>
+        </div>
+      </div>
+
+      <div class="shadow-item">
+        <div class="shadow-icon">🌊</div>
+        <div>
+          <div class="shadow-lbl">Shadow 5 · Swati Moon</div>
+          <div class="shadow-text"><strong>Independence used as avoidance of the deep relational ask.</strong> Swati is the self-going nakshatra: independent, restless, needing to move freely. At shadow frequency, the independence becomes a refusal of the vulnerability that deep partnership and client transformation require. The fear of being held by anyone the way she holds others. The Shatabhisha Venus in H7 (healing through partnership) and the Ketu in H12 Cancer (liberation from nurturing karma) both point to the same curriculum: allowing herself to be the one who receives the container, not only the one who builds it.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2026 ACTIVATION -->
+  <div id="activation" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">☀</div>
+        <div>
+          <div class="card-title">2026 Activation</div>
+          <div class="card-sub">Saturn/Moon deepening now · April 11, 2027 threshold: Saturn/Mars begins on the 37th birthday</div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-headline">April 11, 2027: The Birthday Ignition</div>
+        <div class="highlight-body">On her 37th birthday, the Saturn/Moon antardasha closes and Saturn/Mars begins. Saturn/Mars in a Saturn Mahadasha is the deployment of everything the discipline has built. Mars exalted in Capricorn H6 (Ruchaka Yoga): the execution planet in its highest expression, in the house of service and mastery, activated by the Saturn that rules the entire era. This is not a small shift. This is the moment the precision finds its full force. The question the chart is asking between now and April 2027: what is ready to be deployed on that birthday? What has the Saturn/Moon period refined to the point of completion?</div>
+      </div>
+
+      <div class="grid2">
+        <div class="cell">
+          <div class="cell-label">Saturn/Moon Theme (Sept 2025 to Apr 2027)</div>
+          <div class="cell-sub">The emotional interior of the mastery era. Moon in Swati asks for honest assessment of what the discipline is in service of. Is she practicing toward her own vision or someone else's standard? The answer arrives through stillness, cycle work, and the willingness to let the Saturn/Moon slow things down so the right thing is ready at the threshold.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">What to Prepare Before Apr 11, 2027</div>
+          <div class="cell-sub">The Home Method fully documented and ready to deploy at scale. The client intake process refined and sovereign. The pricing structure reflecting Lord/Steel mastery value. The network of invitations that has been cultivated. On the birthday, the gate opens and Mars executes. What is inside the gate at that point is what gets deployed.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">Jupiter in Gemini H11 (2026)</div>
+          <div class="cell-sub">Jupiter transiting H11 (Gemini: income, network, community) in 2026: expanding the professional network before the Saturn/Mars execution begins. H11 Jupiter does not build the practice, it builds the field from which the practice is recognized. This is the preparation for the April 2027 deployment: grow the invitation field now.</div>
+        </div>
+        <div class="cell">
+          <div class="cell-label">Eclipse and Review Windows</div>
+          <div class="cell-sub">Sept 2026 eclipse season (Virgo/Pisces axis): this lands across her H2/H8 axis. Financial structures and transformative client work will be reviewed and reconfigured. Do not sign major agreements in the 2-week eclipse window. Use it to assess what the current practice has built and what is ready to be released before the birthday threshold.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-title">The Gap Between Now and the Threshold</div>
+      <div class="body-text">Saturn/Moon is not a holding period. It is the deepest refinement period. Every pattern that is still running beneath the discipline comes up for examination: the worthiness calculus, the question of whether the method is truly complete, the places where the Leo ASC has been dimmed. What arrives at April 2027 with full clarity becomes the foundation of Saturn/Mars. What remains muddy stays muddy through the execution phase. Use the Saturn/Moon period not to do more, but to see more clearly.</div>
+    </div>
+  </div>
+
+  <!-- VENTURES & ROLE -->
+  <div id="ventures" class="section">
+
+    <div class="hero">
+      <span class="hero-sigil">◉</span>
+      <div class="hero-kicker">The Home Method™ · Denise Hager</div>
+      <div class="hero-title">HALT · OPEN<br>MEET · EMBRACE</div>
+      <div class="hero-body">"The method is not what she teaches. The method is what she is. A structure so embodied it has become invisible — and that is when it becomes the most powerful."</div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">◉</div>
+        <div>
+          <div class="card-title">The Home Method™ — Chart Read</div>
+          <div class="card-sub">Why this method is not what Denise does, it is who she is, confirmed by three independent systems</div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-headline">Three systems. One confirmation.</div>
+        <div class="highlight-body">Vedic chart: Sasha Yoga + Ruchaka Yoga in H6 (mastery, service, daily practice). Two Panchamahapurusha Yogas in the most practice-oriented house in the chart. This is someone built at the planetary level to master the art of structured human service. Human Design: Splenic Projector. Here to guide, not generate. Built for deep, precise, invited work with people, not volume. Wealth Dynamics: Lord/Steel. Accumulates through depth, expertise, and consistent delivery. The Home Method is the natural form all three systems take when they point in the same direction. This is not a product she built. It is the expression she arrived with.</div>
+      </div>
+
+      <div class="sec-title">The Four Beats — Chart Confirmed</div>
+      <div class="grid2" style="margin-bottom:24px">
+        <div class="cell" style="border-left:3px solid var(--gold)">
+          <div class="cell-label">HALT — Swati Moon</div>
+          <div class="cell-sub">Moon in Swati (the self-going, independent nakshatra) knows what it means to be in motion without pause. HALT is the Swati correction: a deliberate stop before the automatic pattern takes over. This is the moment where the Splenic Projector's gift of present-moment reading inserts itself. Everything changes when the client can pause long enough to hear what is already there.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(74,123,94,0.8)">
+          <div class="cell-label">OPEN — Revati Sun (H8)</div>
+          <div class="cell-sub">The nourishing guide in H8 (transformation, depth). Opening is the territory of the 8th house: allowing what has been defended to become accessible. Denise's Sun in Revati has navigated this territory personally. The gandanta position means her own solar opening has carried significant weight. She teaches from inside the experience, not from the manual.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(186,117,23,0.5)">
+          <div class="cell-label">MEET — Shatabhisha Venus (H7)</div>
+          <div class="cell-sub">Venus in Shatabhisha ("hundred healers") in H7 (partnerships, the relational field): the meeting is the healing. This is not a technique step. This is the nakshatra of the lone healer finally arriving in the space of genuine contact. Denise's capacity for real meeting is her signature offering and it is written directly into the partnership house by the planet of relationship and the nakshatra of healing.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(139,107,139,0.7)">
+          <div class="cell-label">EMBRACE — Ketu in H12 Cancer (Ashlesha)</div>
+          <div class="cell-sub">Ketu in Cancer H12 (liberation, the unseen, past-life patterns): the embrace is the integration of what the opening has released. Ashlesha is the coiling serpent nakshatra, the wisdom that arrives after confronting what has been hidden. This is the step where liberation becomes permanent: not by force, but by acceptance of what was found in OPEN and MEET.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-title">Program Structure and Pricing</div>
+      <div class="grid2" style="margin-bottom:0">
+        <div class="cell" style="border-left:3px solid var(--gold)">
+          <div class="cell-label">Standard Container</div>
+          <div class="cell-value">€5,497</div>
+          <div class="cell-sub">18 sessions over 6 months. The Lord/Steel standard offering: deep access, full method delivery, sustained container. This is not coaching. It is a structured return to self, built over 6 months of relational precision.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(74,123,94,0.8)">
+          <div class="cell-label">Enhanced Container</div>
+          <div class="cell-value">€5,991 / €6,582</div>
+          <div class="cell-sub">Expanded access tiers reflecting additional depth, support, or program components. The pricing ladder is Lord/Steel calibrated: no discounting, no apology for the premium, because the depth of the container has no equivalent in the market it serves.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">★</div>
+        <div>
+          <div class="card-title">The Road to April 2027</div>
+          <div class="card-sub">What the chart says about deploying The Home Method at its fullest scale</div>
+        </div>
+      </div>
+
+      <div class="highlight" style="border-color:rgba(74,123,94,0.35);background:rgba(74,123,94,0.04)">
+        <div class="highlight-headline" style="color:rgba(74,123,94,0.9);font-size:20px">Saturn/Mars (Apr 2027): Ruchaka Yoga executes.</div>
+        <div class="highlight-body">The Home Method has been built in Saturn Mahadasha's long discipline. The Saturn/Moon antardasha has been deepening the emotional accuracy of the method. When Saturn/Mars begins on the birthday, Mars exalted in Capricorn H6 activates inside Saturn's mastery field. This is the period where the method deploys with maximum precision and force. The question is not whether it will work. The chart already confirmed it will. The question is: what is in place to receive the scale?</div>
+      </div>
+
+      <div class="sec-title">What to Build Before the Threshold</div>
+      <div class="grid2" style="margin-bottom:0">
+        <div class="cell" style="border-left:3px solid var(--gold)">
+          <div class="cell-label">Documentation</div>
+          <div class="cell-sub">The Home Method fully written. The HALT·OPEN·MEET·EMBRACE framework documented in a form that can be shared, licensed, or taught. The Saturn/Mars execution will want to move. Ensure the foundation is transferable before it accelerates.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(74,123,94,0.8)">
+          <div class="cell-label">Network and Recognition</div>
+          <div class="cell-sub">H11 Jupiter in 2026 expands the professional field. Use this period to be seen in the right rooms, to accept the right invitations to speak or collaborate, and to cultivate the professional relationships that will become the referral network for Saturn/Mars deployment.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(186,117,23,0.5)">
+          <div class="cell-label">Pricing Sovereignty</div>
+          <div class="cell-sub">Lord/Steel charges for depth, not for hours. The pricing structure should reflect the full value of the container by April 2027. Any apologizing for the premium, any discounting from anxiety, is Saturn's shadow operating. The Ruchaka Yoga delivers without apology. Prepare the pricing to match.</div>
+        </div>
+        <div class="cell" style="border-left:3px solid rgba(139,107,139,0.6)">
+          <div class="cell-label">Embodied Rest</div>
+          <div class="cell-sub">The Splenic Projector's instrument is the body. The Saturn/Mars deployment period will be high-intensity. Build the rest architecture now. What does recovery look like between client cohorts? When does Denise receive the container she gives? The Ketu H12 Cancer placement requires genuine solitude and restoration. Schedule it as a non-negotiable.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DASHA TIMELINE -->
+  <div id="timeline" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">→</div>
+        <div>
+          <div class="card-title">Dasha Timeline</div>
+          <div class="card-sub">1990–2033 · The arc of Denise's major life periods (Saturn Mahadasha era)</div>
+        </div>
+      </div>
+
+      <div class="sec-title">Mahadasha Periods</div>
+      <div style="margin-bottom:28px">
+        <div class="dasha-bar" style="background:rgba(139,107,139,0.07);border:1px solid rgba(139,107,139,0.18);padding:14px 20px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <div>
+            <div class="dasha-lbl" style="font-size:13px;font-weight:600;color:var(--charcoal);margin-bottom:4px;">Rahu Mahadasha</div>
+            <div class="dasha-theme" style="font-size:12px;color:var(--text-muted);">Rapid expansion · karmic acceleration · the formative years of encountering the world</div>
+          </div>
+          <div class="dasha-period" style="font-size:12px;color:var(--text-secondary);white-space:nowrap;margin-left:16px;">~Apr 1990 – ~late 1990s</div>
+        </div>
+        <div class="dasha-bar" style="background:rgba(74,123,94,0.05);border:1px solid rgba(74,123,94,0.15);padding:14px 20px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <div>
+            <div class="dasha-lbl" style="font-size:13px;font-weight:600;color:var(--charcoal);margin-bottom:4px;">Jupiter Mahadasha</div>
+            <div class="dasha-theme" style="font-size:12px;color:var(--text-muted);">Expansion · wisdom seeking · building the vision that Saturn would then structure</div>
+          </div>
+          <div class="dasha-period" style="font-size:12px;color:var(--text-secondary);white-space:nowrap;margin-left:16px;">~late 1990s – Oct 2014</div>
+        </div>
+        <div class="dasha-bar venus" style="background:rgba(186,117,23,0.07);border:1px solid rgba(186,117,23,0.2);padding:14px 20px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <div>
+            <div class="dasha-lbl" style="font-size:13px;font-weight:600;color:var(--charcoal);margin-bottom:4px;">Saturn Mahadasha <span class="now-dot" style="font-size:11px;color:var(--gold);margin-left:8px;">◼ You are here</span></div>
+            <div class="dasha-theme" style="font-size:12px;color:var(--text-muted);">Mastery · structure · disciplined service · the era of building the method and delivering it at full precision</div>
+          </div>
+          <div class="dasha-period" style="font-size:12px;color:var(--text-secondary);white-space:nowrap;margin-left:16px;">Oct 2014 – Oct 2033</div>
+        </div>
+        <div class="dasha-bar antardasha" style="background:rgba(186,117,23,0.04);border:1.5px solid var(--gold);padding:14px 20px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;margin-left:24px;">
+          <div>
+            <div class="dasha-lbl" style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:4px;">Saturn/Moon Antardasha <span style="font-size:11px;color:var(--gold);margin-left:8px;">Active Now · Ends 11 Apr 2027</span></div>
+            <div class="dasha-theme" style="font-size:12px;color:var(--text-muted);">Emotional refinement. The inner architecture is assessed. The method is deepened from within. What is ready will be clear at the threshold.</div>
+          </div>
+          <div class="dasha-period" style="font-size:12px;color:var(--text-secondary);white-space:nowrap;margin-left:16px;">Sept 2025 – 11 Apr 2027</div>
+        </div>
+        <div class="dasha-bar" style="background:rgba(74,123,94,0.05);border:1px solid rgba(74,123,94,0.25);padding:14px 20px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;margin-left:24px;">
+          <div>
+            <div class="dasha-lbl" style="font-size:13px;font-weight:600;color:rgba(74,123,94,0.9);margin-bottom:4px;">Saturn/Mars Antardasha <span style="font-size:11px;margin-left:8px;">Begins on her 37th birthday</span></div>
+            <div class="dasha-theme" style="font-size:12px;color:var(--text-muted);">Ruchaka Yoga executes. Mars exalted H6 + Saturn Mahadasha = the deployment of everything built. The force of precision meets the permission of the birthday.</div>
+          </div>
+          <div class="dasha-period" style="font-size:12px;color:var(--text-secondary);white-space:nowrap;margin-left:16px;">11 Apr 2027 – ~May 2028</div>
+        </div>
+        <div class="dasha-bar future" style="background:rgba(123,90,62,0.05);border:1px solid rgba(123,90,62,0.15);padding:14px 20px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <div>
+            <div class="dasha-lbl" style="font-size:13px;font-weight:600;color:var(--charcoal);margin-bottom:4px;">Mercury Mahadasha</div>
+            <div class="dasha-theme" style="font-size:12px;color:var(--text-muted);">Communication · teaching · the method articulated and disseminated · Saturn's mastery transmitted through Mercury's voice</div>
+          </div>
+          <div class="dasha-period" style="font-size:12px;color:var(--text-secondary);white-space:nowrap;margin-left:16px;">Oct 2033 – Oct 2050</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-title">Visual Arc: 2014 – 2033 (Saturn Mahadasha)</div>
+      <div class="tl-wrap">
+        <div class="tl-track">
+          <div class="tl-fill-past"></div>
+          <div class="tl-fill-now"></div>
+          <div class="tl-fill-future"></div>
+          <div class="tl-marker" style="left:0%">
+            <div class="tl-top"><div class="tl-year">2014</div><div class="tl-lbl">Saturn begins</div></div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-marker" style="left:61%">
+            <div class="tl-top"><div class="tl-year gold">May 2026</div><div class="tl-lbl gold">◼ Now</div></div>
+            <div class="tl-dot now"></div>
+            <div class="tl-bot"><div class="tl-lbl gold">Saturn/Moon active</div></div>
+          </div>
+          <div class="tl-marker" style="left:66%">
+            <div class="tl-top"><div class="tl-year">Apr 2027</div></div>
+            <div class="tl-dot" style="border-color:rgba(74,123,94,0.8)"></div>
+            <div class="tl-bot"><div class="tl-lbl">Saturn/Mars begins</div></div>
+          </div>
+          <div class="tl-marker" style="left:100%">
+            <div class="tl-top"><div class="tl-year">2033</div><div class="tl-lbl">Saturn ends</div></div>
+            <div class="tl-dot jup"></div>
+          </div>
+        </div>
+        <div class="tl-period-labels" style="margin-top:56px">
+          <div style="width:61%;text-align:center">
+            <div style="font-size:16px;color:var(--gold)">Saturn Mahadasha (elapsed)</div>
+            <div style="font-size:11px;color:var(--text-muted)">Discipline, mastery, method-building (12 years)</div>
+          </div>
+          <div style="width:4%;text-align:center;padding-top:16px;font-size:12px;color:var(--text-muted)">~</div>
+          <div style="width:35%;text-align:center">
+            <div style="font-size:16px;color:rgba(74,123,94,0.9)">Saturn (remaining)</div>
+            <div style="font-size:11px;color:var(--text-muted)">Deployment and legacy (7 years)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-title">Saturn Mahadasha — Full Antardasha Sequence</div>
+      <div class="grid2">
+        <div class="cell"><div class="cell-label">Saturn/Saturn · Oct 2014 – ~2018</div><div class="cell-sub">The pure Saturn period: foundation, structure, discipline, the long game established. The Home Method began taking form in this period, consciously or unconsciously. Structures built here are the most durable in the entire Mahadasha.</div></div>
+        <div class="cell"><div class="cell-label">Saturn/Mercury · ~2018 – ~2021</div><div class="cell-sub">Mercury activates: the method is articulated, refined in language, and communicated. The teaching vocabulary of The Home Method crystallized in this period. Mercury in a Saturn field = precision of expression, the exact right word for each step.</div></div>
+        <div class="cell"><div class="cell-label">Saturn/Ketu · ~2021 – ~2022</div><div class="cell-sub">Ketu in Cancer H12: a period of releasing and clearing past-life karmic material related to nurturing and care. Often felt as contraction or loss. The precondition for the expansion that followed.</div></div>
+        <div class="cell"><div class="cell-label">Saturn/Venus · ~2022 – ~2025</div><div class="cell-sub">Venus in Shatabhisha H7 activates: the method finds its relational container. Client partnerships deepen. The healing through relationship that Shatabhisha promises became real in practice. The pricing and positioning clarity of the method.</div></div>
+        <div class="cell"><div class="cell-label">Saturn/Sun · ~early 2025 – Sept 2025</div><div class="cell-sub">Sun in Revati H8: identity through transformation becomes the offer. The Leo ASC's sovereignty was tested and confirmed. Whatever clarity about her own identity arrived in this period is the foundation for the Saturn/Moon that followed.</div></div>
+        <div class="cell" style="border:1.5px solid var(--gold);background:rgba(186,117,23,0.04)"><div class="cell-label" style="color:var(--gold)">Saturn/Moon · Sept 2025 – 11 Apr 2027 (NOW)</div><div class="cell-sub">The emotional interior. Swati Moon's independence in the Saturn field. Refinement from within. The period that prepares everything for the birthday ignition.</div></div>
+        <div class="cell" style="border:1px solid rgba(74,123,94,0.3);background:rgba(74,123,94,0.03)"><div class="cell-label" style="color:rgba(74,123,94,0.9)">Saturn/Mars · 11 Apr 2027 – ~May 2028</div><div class="cell-sub">Ruchaka Yoga in full expression within Saturn Mahadasha. Begins on her 37th birthday. The method deploys at maximum precision and force. This is the event the chart has been building toward since Oct 2014.</div></div>
+        <div class="cell"><div class="cell-label">Saturn/Rahu · ~May 2028 – ~Mar 2031</div><div class="cell-sub">Rahu in Capricorn H6 amplifies: rapid expansion, scale, possibly new territories for the practice. Manage carefully. Rahu's amplification of the Sasha/Ruchaka stellium is extraordinary but requires clear boundaries.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DECLARATIONS -->
+  <div id="declarations" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">❖</div>
+        <div>
+          <div class="card-title">Sacred Declarations</div>
+          <div class="card-sub">The vows that anchor the design</div>
+        </div>
+      </div>
+
+      <div class="decl">
+        <div class="decl-quote">"I do not need to refine it further to deserve to be seen"</div>
+        <div class="decl-line"></div>
+      </div>
+      <div class="decl">
+        <div class="decl-quote">"The method is already complete. I am already the method."</div>
+        <div class="decl-line"></div>
+      </div>
+      <div class="decl">
+        <div class="decl-quote">"I trust the first body hit before the mind speaks"</div>
+        <div class="decl-line"></div>
+      </div>
+      <div class="decl">
+        <div class="decl-quote">"My discipline is in service of my light, not a substitute for it"</div>
+        <div class="decl-line"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">🦁</div>
+        <div>
+          <div class="card-title">Core Transmission</div>
+          <div class="card-sub">The soul of Denise's dharma</div>
+        </div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--charcoal);line-height:1.5;text-align:center;padding:20px 0">
+        She does not guide people home<br>
+        by carrying them.<br>
+        She builds the structure<br>
+        through which <strong>they find their own way back</strong>.
+      </div>
+    </div>
+
+    <div class="card" style="background:var(--charcoal);border-color:transparent">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold-light);line-height:1.7;text-align:center">
+        Leo Ascendant, Purva Phalguni — the sovereign who arrived with the light already on.<br>
+        Revati Sun, H8 — the nourishing guide who knows the underworld from the inside.<br>
+        Sasha Yoga. Ruchaka Yoga. Both in H6.<br>
+        <span style="color:rgba(250,240,220,0.55);font-size:16px">Two royal yogas in the house of service. The method was written before she was born.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALENDAR 2026–2030 -->
+  <div id="calendar" class="section">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">📅</div>
+        <div>
+          <div class="card-title">Astrological Calendar 2026–2030</div>
+          <div class="card-sub">Jupiter, Saturn transits · Dasha transitions · Interpreted for Leo Ascendant</div>
+        </div>
+      </div>
+      <div class="body-text">All dates computed via Swiss Ephemeris (Lahiri Ayanamsa, sidereal) and interpreted relative to Denise's Leo Ascendant, Saturn Mahadasha, H6 Capricorn stellium, and active Saturn/Moon antardasha. Gold dots are prime action windows. Green dots are extraordinary peaks. Red dots are eclipse or review periods. Prepare, do not initiate during eclipses.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin-bottom:0">
+        <div class="cell" style="text-align:center"><div style="width:12px;height:12px;border-radius:50%;background:rgba(74,123,94,0.9);margin:0 auto 8px;box-shadow:0 0 0 3px rgba(74,123,94,0.2);"></div><div class="cell-label" style="text-align:center">Peak</div><div style="font-size:11px;color:var(--text-secondary)">Extraordinary window</div></div>
+        <div class="cell" style="text-align:center"><div style="width:12px;height:12px;border-radius:50%;background:var(--gold);margin:0 auto 8px;"></div><div class="cell-label" style="text-align:center">Auspicious</div><div style="font-size:11px;color:var(--text-secondary)">Prime action window</div></div>
+        <div class="cell" style="text-align:center"><div style="width:12px;height:12px;border-radius:50%;background:rgba(186,117,23,0.4);margin:0 auto 8px;"></div><div class="cell-label" style="text-align:center">Transit</div><div style="font-size:11px;color:var(--text-secondary)">Shift in energy field</div></div>
+        <div class="cell" style="text-align:center"><div style="width:12px;height:12px;border-radius:50%;background:#b53030;margin:0 auto 8px;"></div><div class="cell-label" style="text-align:center">Eclipse</div><div style="font-size:11px;color:var(--text-secondary)">Prepare, don't initiate</div></div>
+      </div>
+    </div>
+
+    <div class="cal-year">
+      <div class="cal-year-hd">
+        <div class="cal-year-num">2026</div>
+        <div>
+          <div class="cal-year-badge badge-gold">The Deepening Before the Threshold</div>
+          <div class="cal-year-theme">Saturn/Moon antardasha runs through all of 2026 and into April 2027. Jupiter transiting H11 (Gemini) expands the professional network in the first half of the year, then moves to H12 (Cancer) from June. Eclipse season in September crosses the H2/H8 axis. The entire year is preparation: refine the method, build the network, clear the shadows, and arrive at April 11, 2027 with nothing unresolved.</div>
+        </div>
+      </div>
+      <ul class="cal-events">
+        <li class="cal-event">
+          <div class="ev-date">Q1 2026</div>
+          <div class="ev-dot auspicious"></div>
+          <div class="ev-content">
+            <div class="ev-title">Jupiter in Gemini H11: Network expansion window <span class="ev-tag power">Network</span></div>
+            <div class="ev-body">Jupiter transiting H11 (income, community, professional network): the period for cultivating the invitation field. Accept speaking opportunities, deepen professional collaborations, build the referral network that will recognize and call forward The Home Method at scale. H11 Jupiter builds the field from which the right clients arrive.</div>
+          </div>
+        </li>
+        <li class="cal-event">
+          <div class="ev-date">Jun 2026</div>
+          <div class="ev-dot auspicious"></div>
+          <div class="ev-content">
+            <div class="ev-title">Jupiter enters Cancer H12: Retreat and spiritual deepening <span class="ev-tag power">Depth Window</span></div>
+            <div class="ev-body">Jupiter transiting H12 (liberation, retreat, the unseen, Ketu's territory): an extraordinary window for retreat work, inner refinement, and connection to the non-material foundation of The Home Method. What she discovers about the method's roots in this period becomes the most potent part of the offering. Deep rest and genuine solitude are astrologically supported here.</div>
+          </div>
+        </li>
+        <li class="cal-event">
+          <div class="ev-date">Sep 2026</div>
+          <div class="ev-dot eclipse"></div>
+          <div class="ev-content">
+            <div class="ev-title">Eclipse season: H2/H8 axis review <span class="ev-tag eclipse">Review Period</span></div>
+            <div class="ev-body">Eclipses crossing the Virgo/Pisces axis affect her H2 (values, income) and H8 (transformation, depth, Sun placement). Financial structures and the identity of the offer will be reviewed and reconfigured. Do not sign major agreements or launch new programs in the 2-week eclipse window. Use it to assess what is genuinely ready before April 2027.</div>
+          </div>
+        </li>
+        <li class="cal-event">
+          <div class="ev-date">Oct–Dec 2026</div>
+          <div class="ev-dot auspicious"></div>
+          <div class="ev-content">
+            <div class="ev-title">Final method refinement window before the threshold <span class="ev-tag power">Preparation</span></div>
+            <div class="ev-body">After the eclipse review, the remaining 6 months before the birthday threshold are the final refinement window. Complete the documentation of The Home Method. Confirm the pricing. Identify the first cohort or client to receive the full Saturn/Mars force when it arrives. The Lord does not launch unprepared.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cal-year">
+      <div class="cal-year-hd">
+        <div class="cal-year-num">2027</div>
+        <div>
+          <div class="cal-year-badge badge-green">The Birthday Ignition Year</div>
+          <div class="cal-year-theme">The defining year of Denise's Saturn Mahadasha. April 11: Saturn/Mars begins on her 37th birthday. What has been built through 12+ years of Saturnian discipline now deploys through Mars exalted in H6. Jupiter moves through H12 and into H1 (Leo) by year's end: personal reinvention alongside the deployment. This is the year the structure and the self converge.</div>
+        </div>
+      </div>
+      <ul class="cal-events">
+        <li class="cal-event">
+          <div class="ev-date">11 Apr 2027</div>
+          <div class="ev-dot peak"></div>
+          <div class="ev-content">
+            <div class="ev-title">BIRTHDAY: Saturn/Mars antardasha begins. Ruchaka Yoga executes. <span class="ev-tag peak">Threshold</span></div>
+            <div class="ev-body">Saturn/Moon closes. Saturn/Mars begins. Mars exalted in Capricorn H6 (Ruchaka Yoga) activates inside Saturn Mahadasha. The execution phase of the entire Mahadasha begins on this day. Mark it intentionally. Whatever is in place at this threshold is what deploys. One year of Ruchaka force in the service and mastery house: the most precise deployment of The Home Method she has ever made. Act from the structure, not from urgency.</div>
+          </div>
+        </li>
+        <li class="cal-event">
+          <div class="ev-date">Mid-2027</div>
+          <div class="ev-dot auspicious"></div>
+          <div class="ev-content">
+            <div class="ev-title">Jupiter enters Leo H1: Identity expansion and personal authority <span class="ev-tag power">Identity Peak</span></div>
+            <div class="ev-body">Jupiter transiting her Leo Ascendant (H1): once in 12 years, Jupiter expands the identity itself. Her Leo sovereignty, the Purva Phalguni creative patronage, and the Projector mastery all receive Jupiter's expansion simultaneously. This is the period where she becomes most publicly herself. The Leo ASC that has perhaps been dimmed is now supported by Jupiter's protective and amplifying force. Allow the radiance.</div>
+          </div>
+        </li>
+        <li class="cal-event">
+          <div class="ev-date">~May 2028</div>
+          <div class="ev-dot transit"></div>
+          <div class="ev-content">
+            <div class="ev-title">Saturn/Mars closes, Saturn/Rahu begins: Scale and amplification <span class="ev-tag power">Transition</span></div>
+            <div class="ev-body">Rahu in Capricorn H6 activates: the amplification phase of what Mars has deployed. Saturn/Rahu will bring rapid expansion, wider reach, and potentially obsessive precision. Use the Splenic authority to distinguish genuine expansion from Rahu's distortion. The practice built through Saturn/Mars is the anchor. Rahu accelerates it. Don't lose the quality in the speed.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cal-year">
+      <div class="cal-year-hd">
+        <div class="cal-year-num">2028–30</div>
+        <div>
+          <div class="cal-year-badge badge-gold">Saturn / Rahu: Amplified Mastery</div>
+          <div class="cal-year-theme">Saturn/Rahu antardasha runs approximately May 2028 to March 2031. Rahu in Capricorn H6 amplifies the Sasha/Ruchaka stellium's already exceptional mastery drive. Jupiter transiting Virgo (H2), Libra (H3), and Scorpio (H4) over this period brings income focus, communication depth, and home/foundation themes. Quality over volume remains the Lord's rule throughout this entire period.</div>
+        </div>
+      </div>
+      <ul class="cal-events">
+        <li class="cal-event">
+          <div class="ev-date">2028</div>
+          <div class="ev-dot auspicious"></div>
+          <div class="ev-content">
+            <div class="ev-title">Jupiter in Virgo H2: Income structures mature <span class="ev-tag power">Financial</span></div>
+            <div class="ev-body">H2 Jupiter (Virgo): income through precision and service quality. The pricing and financial architecture of The Home Method receives Jupiter's expansion. Lord/Steel at full maturity: deep expertise commanding premium pricing without apology, the mastery so visible that the value is self-evident.</div>
+          </div>
+        </li>
+        <li class="cal-event">
+          <div class="ev-date">2029</div>
+          <div class="ev-dot auspicious"></div>
+          <div class="ev-content">
+            <div class="ev-title">Jupiter in Libra H3: The method finds its voice <span class="ev-tag power">Communication</span></div>
+            <div class="ev-body">H3 Jupiter (Libra, Moon's sign): expansion of communication, writing, and the articulacy of The Home Method. Moon in Swati H3 receives Jupiter directly. The emotional intelligence of the method becomes public. This is the period where the method gets transmitted beyond direct client containers: written work, speaking, teaching others in the framework.</div>
+          </div>
+        </li>
+        <li class="cal-event">
+          <div class="ev-date">~Mar 2031</div>
+          <div class="ev-dot transit"></div>
+          <div class="ev-content">
+            <div class="ev-title">Saturn/Jupiter begins: Dharmic wisdom integrated into mastery <span class="ev-tag power">Integration</span></div>
+            <div class="ev-body">The final major antardasha of Saturn Mahadasha. Jupiter in Ardra H11 (community, income, wisdom through storms): integrating the dharmic understanding of the entire Mahadasha era. This period prepares the transition to Mercury Mahadasha (Oct 2033): the era of transmission, teaching, and the vocal expression of everything Saturn built. Saturn/Jupiter is the bridge between the mastery and its teaching.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-icon">✦</div>
+        <div>
+          <div class="card-title">Master Windows 2026–2030</div>
+          <div class="card-sub">The five most critical windows in Denise's arc: computed via Swiss Ephemeris and Vimshottari Dasha</div>
+        </div>
+      </div>
+      <div>
+        <div class="mw-row gold">
+          <div class="mw-period-wrap"><div class="mw-type">Threshold Preparation</div><div class="mw-period">May 2026 – Apr 2027</div></div>
+          <div class="mw-desc">Saturn/Moon deepening + Jupiter in H12. Refine the method, clear the shadows, build the network of recognition. The entire year is preparation for the birthday threshold. Everything unresolved in this period carries forward into Saturn/Mars. Use it fully.</div>
+        </div>
+        <div class="mw-row green">
+          <div class="mw-period-wrap"><div class="mw-type">Birthday Ignition</div><div class="mw-period">11 Apr 2027</div></div>
+          <div class="mw-desc">Saturn/Mars begins on her 37th birthday. Ruchaka Yoga in full expression. Mars exalted H6 + Saturn Mahadasha = the deployment of everything built since 2014. This is the single most significant astrological threshold in Denise's career. Act from preparation, not urgency.</div>
+        </div>
+        <div class="mw-row green">
+          <div class="mw-period-wrap"><div class="mw-type">Identity Peak</div><div class="mw-period">Mid-2027</div></div>
+          <div class="mw-desc">Jupiter transiting Leo H1: once-in-12-years expansion of the Ascendant itself. Leo sovereignty at maximum support. The Home Method is delivered from a fully inhabited Leo presence. Allow the radiance. This is the period where the Leo ASC stops being dimmed.</div>
+        </div>
+        <div class="mw-row gold">
+          <div class="mw-period-wrap"><div class="mw-type">Amplified Mastery</div><div class="mw-period">May 2028 – Mar 2031</div></div>
+          <div class="mw-desc">Saturn/Rahu: rapid expansion of what Mars deployed. The practice scales. Income structures mature (Jupiter H2, 2028). Communication of the method goes wider (Jupiter H3, 2029). Manage Rahu's amplification: quality over volume is the Lord's rule throughout.</div>
+        </div>
+        <div class="mw-row" style="background:rgba(139,107,139,0.05);border:1px solid rgba(139,107,139,0.15)">
+          <div class="mw-period-wrap"><div class="mw-type">Legacy Integration</div><div class="mw-period">Mar 2031 – Oct 2033</div></div>
+          <div class="mw-desc">Saturn/Jupiter: the dharmic wisdom of the mastery era integrates. Preparation for Mercury Mahadasha (Oct 2033): the era of teaching, transmission, and vocal legacy. Everything Saturn built is handed to Mercury to articulate. The Home Method becomes the teaching framework others carry forward.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end main -->
+
+<script>
+  function show(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.querySelectorAll('.nav-item').forEach(el => {
+      if (el.getAttribute('onclick') && el.getAttribute('onclick').includes("'" + id + "'")) {
+        el.classList.add('active');
+      }
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
